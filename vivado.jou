@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun May  2 17:05:17 2021
+# Process ID: 20880
+# Current directory: C:/Users/denis/Documents/WSU/2 Sophomore/1 Sophomore 1st Semester/Logic Circuits (EE 214)/EE Projects/Project 11/Proj11
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21496 C:\Users\denis\Documents\WSU\2 Sophomore\1 Sophomore 1st Semester\Logic Circuits (EE 214)\EE Projects\Project 11\Proj11\Proj11.xpr
+# Log file: C:/Users/denis/Documents/WSU/2 Sophomore/1 Sophomore 1st Semester/Logic Circuits (EE 214)/EE Projects/Project 11/Proj11/vivado.log
+# Journal file: C:/Users/denis/Documents/WSU/2 Sophomore/1 Sophomore 1st Semester/Logic Circuits (EE 214)/EE Projects/Project 11/Proj11\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/denis/Documents/WSU/2 Sophomore/1 Sophomore 1st Semester/Logic Circuits (EE 214)/EE Projects/Project 11/Proj11/Proj11.xpr}
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/denis/Documents/WSU/2 Sophomore/1 Sophomore 1st Semester/Logic Circuits (EE 214)/EE Projects/Project 11/Proj11/Proj11.srcs/sources_1/bd/Req2/Req2.bd}

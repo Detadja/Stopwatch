@@ -1,0 +1,703 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x9D1E0C292309979F",
+      "device": "xc7z007sclg400-1",
+      "gen_directory": "../../../../Proj11.gen/sources_1/bd/Req2",
+      "name": "Req2",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Req2DispCounter_0": "",
+      "Req2Mux_0": "",
+      "util_vector_logic_0": "",
+      "util_vector_logic_1": "",
+      "util_vector_logic_2": "",
+      "Req2_7seg_0": "",
+      "Req2Decoder_0": "",
+      "Req2Counter_0": "",
+      "Req2Counter_1": "",
+      "Req2Counter_2": "",
+      "Req2Counter_3": "",
+      "Req2Div_0": "",
+      "Req2FSM_0": ""
+    },
+    "ports": {
+      "seg_cat": {
+        "direction": "O",
+        "left": "6",
+        "right": "0"
+      },
+      "seg_an": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "rst",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "Req2_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "rst": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "start": {
+        "direction": "I"
+      },
+      "stop": {
+        "direction": "I"
+      },
+      "inc": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "Req2DispCounter_0": {
+        "vlnv": "xilinx.com:module_ref:Req2DispCounter:1.0",
+        "xci_name": "Req2_Req2DispCounter_0_0",
+        "xci_path": "ip\\Req2_Req2DispCounter_0_0\\Req2_Req2DispCounter_0_0.xci",
+        "inst_hier_path": "Req2DispCounter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Req2DispCounter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "disp_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "Req2_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "B0": {
+            "direction": "O"
+          },
+          "B1": {
+            "direction": "O"
+          }
+        }
+      },
+      "Req2Mux_0": {
+        "vlnv": "xilinx.com:module_ref:Req2Mux:1.0",
+        "xci_name": "Req2_Req2Mux_0_0",
+        "xci_path": "ip\\Req2_Req2Mux_0_0\\Req2_Req2Mux_0_0.xci",
+        "inst_hier_path": "Req2Mux_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Req2Mux",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "I0": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "I1": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "I2": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "I3": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "S0": {
+            "direction": "I"
+          },
+          "S1": {
+            "direction": "I"
+          },
+          "Y": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "Req2_util_vector_logic_0_0",
+        "xci_path": "ip\\Req2_util_vector_logic_0_0\\Req2_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_1": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "Req2_util_vector_logic_0_1",
+        "xci_path": "ip\\Req2_util_vector_logic_0_1\\Req2_util_vector_logic_0_1.xci",
+        "inst_hier_path": "util_vector_logic_1",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_2": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "Req2_util_vector_logic_0_2",
+        "xci_path": "ip\\Req2_util_vector_logic_0_2\\Req2_util_vector_logic_0_2.xci",
+        "inst_hier_path": "util_vector_logic_2",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "Req2_7seg_0": {
+        "vlnv": "xilinx.com:module_ref:Req2_7seg:1.0",
+        "xci_name": "Req2_Req2_7seg_0_0",
+        "xci_path": "ip\\Req2_Req2_7seg_0_0\\Req2_Req2_7seg_0_0.xci",
+        "inst_hier_path": "Req2_7seg_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Req2_7seg",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Y": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "seg_cat": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          }
+        }
+      },
+      "Req2Decoder_0": {
+        "vlnv": "xilinx.com:module_ref:Req2Decoder:1.0",
+        "xci_name": "Req2_Req2Decoder_0_0",
+        "xci_path": "ip\\Req2_Req2Decoder_0_0\\Req2_Req2Decoder_0_0.xci",
+        "inst_hier_path": "Req2Decoder_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Req2Decoder",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "I0": {
+            "direction": "I"
+          },
+          "I1": {
+            "direction": "I"
+          },
+          "seg_an": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "Req2Counter_0": {
+        "vlnv": "xilinx.com:module_ref:Req2Counter:1.0",
+        "xci_name": "Req2_Req2Counter_0_0",
+        "xci_path": "ip\\Req2_Req2Counter_0_0\\Req2_Req2Counter_0_0.xci",
+        "inst_hier_path": "Req2Counter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Req2Counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Cen": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "Tc": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "Y": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "Req2Counter_1": {
+        "vlnv": "xilinx.com:module_ref:Req2Counter:1.0",
+        "xci_name": "Req2_Req2Counter_0_1",
+        "xci_path": "ip\\Req2_Req2Counter_0_1\\Req2_Req2Counter_0_1.xci",
+        "inst_hier_path": "Req2Counter_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Req2Counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Cen": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "Tc": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "Y": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "Req2Counter_2": {
+        "vlnv": "xilinx.com:module_ref:Req2Counter:1.0",
+        "xci_name": "Req2_Req2Counter_0_2",
+        "xci_path": "ip\\Req2_Req2Counter_0_2\\Req2_Req2Counter_0_2.xci",
+        "inst_hier_path": "Req2Counter_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Req2Counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Cen": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "Tc": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "Y": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "Req2Counter_3": {
+        "vlnv": "xilinx.com:module_ref:Req2Counter:1.0",
+        "xci_name": "Req2_Req2Counter_0_3",
+        "xci_path": "ip\\Req2_Req2Counter_0_3\\Req2_Req2Counter_0_3.xci",
+        "inst_hier_path": "Req2Counter_3",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Req2Counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Cen": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "Tc": {
+            "direction": "O"
+          },
+          "Y": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "Req2Div_0": {
+        "vlnv": "xilinx.com:module_ref:Req2Div:1.0",
+        "xci_name": "Req2_Req2Div_0_0",
+        "xci_path": "ip\\Req2_Req2Div_0_0\\Req2_Req2Div_0_0.xci",
+        "inst_hier_path": "Req2Div_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Req2Div",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "Req2_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_1hz": {
+            "direction": "O"
+          }
+        }
+      },
+      "Req2FSM_0": {
+        "vlnv": "xilinx.com:module_ref:Req2FSM:1.0",
+        "xci_name": "Req2_Req2FSM_0_0",
+        "xci_path": "ip\\Req2_Req2FSM_0_0\\Req2_Req2FSM_0_0.xci",
+        "inst_hier_path": "Req2FSM_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Req2FSM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "start": {
+            "direction": "I"
+          },
+          "stop": {
+            "direction": "I"
+          },
+          "inc": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "Cen": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        }
+      }
+    },
+    "nets": {
+      "Req2DispCounter_0_B0": {
+        "ports": [
+          "Req2DispCounter_0/B0",
+          "Req2Mux_0/S0",
+          "Req2Decoder_0/I0"
+        ]
+      },
+      "Req2DispCounter_0_B1": {
+        "ports": [
+          "Req2DispCounter_0/B1",
+          "Req2Mux_0/S1",
+          "Req2Decoder_0/I1"
+        ]
+      },
+      "Req2Mux_0_Y": {
+        "ports": [
+          "Req2Mux_0/Y",
+          "Req2_7seg_0/Y"
+        ]
+      },
+      "Req2_7seg_0_seg_cat": {
+        "ports": [
+          "Req2_7seg_0/seg_cat",
+          "seg_cat"
+        ]
+      },
+      "Req2Decoder_0_seg_an": {
+        "ports": [
+          "Req2Decoder_0/seg_an",
+          "seg_an"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "rst",
+          "Req2Counter_0/rst",
+          "Req2Counter_1/rst",
+          "Req2Counter_2/rst",
+          "Req2Counter_3/rst",
+          "Req2Div_0/rst",
+          "Req2FSM_0/rst"
+        ]
+      },
+      "start_0_1": {
+        "ports": [
+          "start",
+          "Req2FSM_0/start"
+        ]
+      },
+      "stop_0_1": {
+        "ports": [
+          "stop",
+          "Req2FSM_0/stop"
+        ]
+      },
+      "inc_0_1": {
+        "ports": [
+          "inc",
+          "Req2FSM_0/inc"
+        ]
+      },
+      "Req2Counter_0_Y": {
+        "ports": [
+          "Req2Counter_0/Y",
+          "Req2Mux_0/I0"
+        ]
+      },
+      "Req2Counter_3_Y": {
+        "ports": [
+          "Req2Counter_3/Y",
+          "Req2Mux_0/I3"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "Req2Counter_1/Cen"
+        ]
+      },
+      "Req2Counter_0_Tc": {
+        "ports": [
+          "Req2Counter_0/Tc",
+          "util_vector_logic_0/Op2"
+        ]
+      },
+      "Req2FSM_0_Cen": {
+        "ports": [
+          "Req2FSM_0/Cen",
+          "util_vector_logic_0/Op1",
+          "util_vector_logic_1/Op1",
+          "util_vector_logic_2/Op1",
+          "Req2Counter_0/Cen"
+        ]
+      },
+      "Req2Counter_1_Tc": {
+        "ports": [
+          "Req2Counter_1/Tc",
+          "util_vector_logic_1/Op2"
+        ]
+      },
+      "util_vector_logic_1_Res": {
+        "ports": [
+          "util_vector_logic_1/Res",
+          "Req2Counter_2/Cen"
+        ]
+      },
+      "util_vector_logic_2_Res": {
+        "ports": [
+          "util_vector_logic_2/Res",
+          "Req2Counter_3/Cen"
+        ]
+      },
+      "Req2Counter_2_Tc": {
+        "ports": [
+          "Req2Counter_2/Tc",
+          "util_vector_logic_2/Op2"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "Req2DispCounter_0/disp_clk",
+          "Req2Div_0/clk"
+        ]
+      },
+      "Req2Div_0_clk_1hz": {
+        "ports": [
+          "Req2Div_0/clk_1hz",
+          "Req2Counter_0/clk",
+          "Req2Counter_1/clk",
+          "Req2Counter_2/clk",
+          "Req2Counter_3/clk",
+          "Req2FSM_0/clk"
+        ]
+      },
+      "Req2Counter_1_Y": {
+        "ports": [
+          "Req2Counter_1/Y",
+          "Req2Mux_0/I1"
+        ]
+      },
+      "Req2Counter_2_Y": {
+        "ports": [
+          "Req2Counter_2/Y",
+          "Req2Mux_0/I2"
+        ]
+      }
+    }
+  }
+}
