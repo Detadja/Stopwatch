@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 21 07:17:00 2021" VIVADOVERSION="2020.2">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="Req2" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" LEFT="6" NAME="seg_cat" RIGHT="0" SIGIS="undef" SIGNAME="Req2_7seg_0_seg_cat">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Req2_7seg_0" PORT="seg_cat"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="seg_an" RIGHT="0" SIGIS="undef" SIGNAME="Req2Decoder_0_seg_an">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Req2Decoder_0" PORT="seg_an"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Req2DispCounter_0" PORT="disp_clk"/>
+        <CONNECTION INSTANCE="Req2Div_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Req2Counter_0" PORT="rst"/>
+        <CONNECTION INSTANCE="Req2Counter_1" PORT="rst"/>
+        <CONNECTION INSTANCE="Req2Counter_2" PORT="rst"/>
+        <CONNECTION INSTANCE="Req2Counter_3" PORT="rst"/>
+        <CONNECTION INSTANCE="Req2Div_0" PORT="rst"/>
+        <CONNECTION INSTANCE="Req2FSM_0" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="start" SIGIS="undef" SIGNAME="External_Ports_start">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Req2FSM_0" PORT="start"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="stop" SIGIS="undef" SIGNAME="External_Ports_stop">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Req2FSM_0" PORT="stop"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="inc" SIGIS="undef" SIGNAME="External_Ports_inc">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Req2FSM_0" PORT="inc"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/Req2Counter_0" HWVERSION="1.0" INSTANCE="Req2Counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Req2Counter" VLNV="xilinx.com:module_ref:Req2Counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Req2_Req2Counter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="Cen" SIGIS="undef" SIGNAME="Req2FSM_0_Cen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2FSM_0" PORT="Cen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="Req2Div_0_clk_1hz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Div_0" PORT="clk_1hz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Tc" SIGIS="undef" SIGNAME="Req2Counter_0_Tc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Y" RIGHT="0" SIGIS="undef" SIGNAME="Req2Counter_0_Y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Mux_0" PORT="I0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Req2Counter_1" HWVERSION="1.0" INSTANCE="Req2Counter_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Req2Counter" VLNV="xilinx.com:module_ref:Req2Counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Req2_Req2Counter_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="Cen" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="Req2Div_0_clk_1hz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Div_0" PORT="clk_1hz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Tc" SIGIS="undef" SIGNAME="Req2Counter_1_Tc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_1" PORT="Op2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Y" RIGHT="0" SIGIS="undef" SIGNAME="Req2Counter_1_Y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Mux_0" PORT="I1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Req2Counter_2" HWVERSION="1.0" INSTANCE="Req2Counter_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Req2Counter" VLNV="xilinx.com:module_ref:Req2Counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Req2_Req2Counter_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="Cen" SIGIS="undef" SIGNAME="util_vector_logic_1_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_1" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="Req2Div_0_clk_1hz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Div_0" PORT="clk_1hz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Tc" SIGIS="undef" SIGNAME="Req2Counter_2_Tc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_2" PORT="Op2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Y" RIGHT="0" SIGIS="undef" SIGNAME="Req2Counter_2_Y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Mux_0" PORT="I2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Req2Counter_3" HWVERSION="1.0" INSTANCE="Req2Counter_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Req2Counter" VLNV="xilinx.com:module_ref:Req2Counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Req2_Req2Counter_0_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="Cen" SIGIS="undef" SIGNAME="util_vector_logic_2_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_2" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="Req2Div_0_clk_1hz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Div_0" PORT="clk_1hz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Tc" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="Y" RIGHT="0" SIGIS="undef" SIGNAME="Req2Counter_3_Y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Mux_0" PORT="I3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Req2Decoder_0" HWVERSION="1.0" INSTANCE="Req2Decoder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Req2Decoder" VLNV="xilinx.com:module_ref:Req2Decoder:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Req2_Req2Decoder_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="I0" SIGIS="undef" SIGNAME="Req2DispCounter_0_B0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2DispCounter_0" PORT="B0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="I1" SIGIS="undef" SIGNAME="Req2DispCounter_0_B1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2DispCounter_0" PORT="B1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="seg_an" RIGHT="0" SIGIS="undef" SIGNAME="Req2Decoder_0_seg_an">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="seg_an"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Req2DispCounter_0" HWVERSION="1.0" INSTANCE="Req2DispCounter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Req2DispCounter" VLNV="xilinx.com:module_ref:Req2DispCounter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Req2_Req2DispCounter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="disp_clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="B0" SIGIS="undef" SIGNAME="Req2DispCounter_0_B0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Mux_0" PORT="S0"/>
+            <CONNECTION INSTANCE="Req2Decoder_0" PORT="I0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="B1" SIGIS="undef" SIGNAME="Req2DispCounter_0_B1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Mux_0" PORT="S1"/>
+            <CONNECTION INSTANCE="Req2Decoder_0" PORT="I1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Req2Div_0" HWVERSION="1.0" INSTANCE="Req2Div_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Req2Div" VLNV="xilinx.com:module_ref:Req2Div:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Req2_Req2Div_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="clk_1hz" SIGIS="undef" SIGNAME="Req2Div_0_clk_1hz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Counter_0" PORT="clk"/>
+            <CONNECTION INSTANCE="Req2Counter_1" PORT="clk"/>
+            <CONNECTION INSTANCE="Req2Counter_2" PORT="clk"/>
+            <CONNECTION INSTANCE="Req2Counter_3" PORT="clk"/>
+            <CONNECTION INSTANCE="Req2FSM_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Req2FSM_0" HWVERSION="1.0" INSTANCE="Req2FSM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Req2FSM" VLNV="xilinx.com:module_ref:Req2FSM:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Req2_Req2FSM_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="start" SIGIS="undef" SIGNAME="External_Ports_start">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="start"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="stop" SIGIS="undef" SIGNAME="External_Ports_stop">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="stop"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="inc" SIGIS="undef" SIGNAME="External_Ports_inc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="inc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="Req2Div_0_clk_1hz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Div_0" PORT="clk_1hz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Cen" SIGIS="undef" SIGNAME="Req2FSM_0_Cen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op1"/>
+            <CONNECTION INSTANCE="util_vector_logic_1" PORT="Op1"/>
+            <CONNECTION INSTANCE="util_vector_logic_2" PORT="Op1"/>
+            <CONNECTION INSTANCE="Req2Counter_0" PORT="Cen"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Req2Mux_0" HWVERSION="1.0" INSTANCE="Req2Mux_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Req2Mux" VLNV="xilinx.com:module_ref:Req2Mux:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Req2_Req2Mux_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="I0" RIGHT="0" SIGIS="undef" SIGNAME="Req2Counter_0_Y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Counter_0" PORT="Y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="I1" RIGHT="0" SIGIS="undef" SIGNAME="Req2Counter_1_Y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Counter_1" PORT="Y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="I2" RIGHT="0" SIGIS="undef" SIGNAME="Req2Counter_2_Y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Counter_2" PORT="Y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="I3" RIGHT="0" SIGIS="undef" SIGNAME="Req2Counter_3_Y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Counter_3" PORT="Y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S0" SIGIS="undef" SIGNAME="Req2DispCounter_0_B0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2DispCounter_0" PORT="B0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S1" SIGIS="undef" SIGNAME="Req2DispCounter_0_B1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2DispCounter_0" PORT="B1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Y" RIGHT="0" SIGIS="undef" SIGNAME="Req2Mux_0_Y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2_7seg_0" PORT="Y"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Req2_7seg_0" HWVERSION="1.0" INSTANCE="Req2_7seg_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Req2_7seg" VLNV="xilinx.com:module_ref:Req2_7seg:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Req2_Req2_7seg_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="Y" RIGHT="0" SIGIS="undef" SIGNAME="Req2Mux_0_Y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Mux_0" PORT="Y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="seg_cat" RIGHT="0" SIGIS="undef" SIGNAME="Req2_7seg_0_seg_cat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="seg_cat"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/util_vector_logic_0" HWVERSION="2.0" INSTANCE="util_vector_logic_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="and"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="Req2_util_vector_logic_0_0"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_andgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="Req2FSM_0_Cen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2FSM_0" PORT="Cen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="Op2" RIGHT="0" SIGIS="undef" SIGNAME="Req2Counter_0_Tc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Counter_0" PORT="Tc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Counter_1" PORT="Cen"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/util_vector_logic_1" HWVERSION="2.0" INSTANCE="util_vector_logic_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="and"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="Req2_util_vector_logic_0_1"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_andgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="Req2FSM_0_Cen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2FSM_0" PORT="Cen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="Op2" RIGHT="0" SIGIS="undef" SIGNAME="Req2Counter_1_Tc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Counter_1" PORT="Tc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_1_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Counter_2" PORT="Cen"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/util_vector_logic_2" HWVERSION="2.0" INSTANCE="util_vector_logic_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="and"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="Req2_util_vector_logic_0_2"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_andgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="Req2FSM_0_Cen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2FSM_0" PORT="Cen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="Op2" RIGHT="0" SIGIS="undef" SIGNAME="Req2Counter_2_Tc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Counter_2" PORT="Tc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_2_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Req2Counter_3" PORT="Cen"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
